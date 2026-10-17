@@ -1,6 +1,6 @@
 # MotorPH Category Distribution Chart
 
-Milestone 2 Draft — MO-IT106 Data Analytics Fundamentals
+Milestone 2 Draft: "MO-IT106 Data Analytics Fundamentals"
 
 ## The chart
 
