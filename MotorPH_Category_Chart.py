@@ -1,39 +1,62 @@
 # MotorPH product list - category distribution chart
-# loads the cleaned product list and saves a bar chart
-# used for the Milestone 2 draft
+# loads the cleaned product list and sales data, saves the charts
+# used for the Milestone 2 submission
 
 import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def make_chart(df):
+def make_chart(products, sales):
     # count how many products fall under each category, most first
-    counts = df['Product Category'].value_counts()
+    counts = products['Product Category'].value_counts()
     # share of each category out of all the products
-    shares = counts / len(df) * 100
+    shares = counts / len(products) * 100
 
-    # make the bar chart
-    plt.figure(figsize=(10, 6))
-    plt.bar(counts.index, counts.values)
+    # attach the category to each sale, then total the units per category
+    merged = sales.merge(
+        products[['Product Name', 'Product Category']],
+        left_on='Product', right_on='Product Name', how='left')
+    units = merged.groupby('Product Category')['Quantity'].sum()
+    units = units.reindex(counts.index)
 
+    # make two charts stacked in one image
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
+
+    # top chart: product count per category
+    ax1.bar(counts.index, counts.values)
     # put the count and share on top of each bar so it is easy to read
     for i, (c, s) in enumerate(zip(counts.values, shares.values)):
-        plt.text(i, c + 0.15, f'{c} ({s:.0f}%)', ha='center', fontsize=8)
+        ax1.text(i, c + 0.15, f'{c} ({s:.0f}%)', ha='center', fontsize=8)
+    ax1.set_title('MotorPH Products by Category')
+    ax1.set_xlabel('Product Category')
+    ax1.set_ylabel('Number of Products')
+    for label in ax1.get_xticklabels():
+        label.set_rotation(45)
+        label.set_ha('right')
 
-    # title and labels
-    plt.title('MotorPH Products by Category')
-    plt.xlabel('Product Category')
-    plt.ylabel('Number of Products')
-    plt.xticks(rotation=45, ha='right')
-    plt.tight_layout()
+    # bottom chart: units sold per category
+    ax2.bar(units.index, units.values)
+    # put the units sold on top of each bar so it is easy to read
+    for i, u in enumerate(units.values):
+        ax2.text(i, u + 40, f'{u:,}', ha='center', fontsize=8)
+    ax2.set_title('MotorPH Units Sold by Category')
+    ax2.set_xlabel('Product Category')
+    ax2.set_ylabel('Units Sold')
+    for label in ax2.get_xticklabels():
+        label.set_rotation(45)
+        label.set_ha('right')
 
-    # save the chart and show it
-    plt.savefig('MotorPH_Category_Chart.png')
+    fig.tight_layout()
+
+    # save the charts and show them
+    fig.savefig('MotorPH_Category_Chart.png')
     print('saved MotorPH_Category_Chart.png')
     print(counts)
+    print(units)
 
 
-# load the cleaned product list from Milestone 1
-df = pd.read_csv('MotorPH_Product_List_Cleaned.csv')
-make_chart(df)
+# load the cleaned product list and sales data from Milestone 1
+products = pd.read_csv('MotorPH_Product_List_Cleaned.csv')
+sales = pd.read_csv('MotorPH_Sales_Cleaned.csv')
+make_chart(products, sales)
 plt.show()
