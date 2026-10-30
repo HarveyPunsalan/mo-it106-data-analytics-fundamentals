@@ -1,7 +1,13 @@
 # MotorPH product list and sales data (3rd quarter, year 2025)
 # loading, checking and cleaning the two datasets before analysis
 
+from pathlib import Path
+
 import pandas as pd
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+RAW_DIR = BASE_DIR / "data" / "raw"
+CLEANED_DIR = BASE_DIR / "data" / "cleaned"
 
 
 def summarize(df):
@@ -13,8 +19,8 @@ def summarize(df):
 
 
 # load the datasets downloaded from the MotorPH site
-products = pd.read_csv('MotorPH_Products_List_2025.csv')
-sales = pd.read_csv('MotorPH_Sales Data-3rd Quarter-Year 2025.csv')
+products = pd.read_csv(RAW_DIR / 'MotorPH_Products_List_2025.csv')
+sales = pd.read_csv(RAW_DIR / 'MotorPH_Sales_3rd_Quarter_2025.csv')
 
 
 # ---------------------------------------------------------------
@@ -174,6 +180,7 @@ print(sales.head())
 # ---------------------------------------------------------------
 # 6. save the cleaned datasets
 # ---------------------------------------------------------------
-products.to_csv('MotorPH_Product_List_Cleaned.csv', index=False)
-sales.to_csv('MotorPH_Sales_Cleaned.csv', index=False)
-print('saved MotorPH_Product_List_Report.csv and MotorPH_Sales_Cleaned.csv')
+CLEANED_DIR.mkdir(parents=True, exist_ok=True)
+products.to_csv(CLEANED_DIR / 'MotorPH_Product_List_Cleaned.csv', index=False)
+sales.to_csv(CLEANED_DIR / 'MotorPH_Sales_Cleaned.csv', index=False)
+print('saved MotorPH_Product_List_Cleaned.csv and MotorPH_Sales_Cleaned.csv')

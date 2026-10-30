@@ -1,0 +1,38 @@
+MOTORPH MS2 - DATA QUALITY AND RECONCILIATION REPORT
+================================================================
+Products file: MotorPH_Product_List_Cleaned.csv
+Sales file: MotorPH_Sales_Cleaned.csv
+
+LOADED
+  Product rows: 50
+  Sales rows: 991
+  Sales rows analyzed: 990
+  Date window: 2025-06-01 to 2025-08-31
+
+QUALITY CHECKS
+  Missing values (products / sales): 0 / 0
+  Duplicate rows (products / sales): 0 / 0
+  Unparseable dates: 0
+  Unmatched product names: []
+  Unit price mismatch vs product list: 0
+  Quantity x Unit Price != Total: 0
+  Out-of-period rows excluded: 1
+  Excluded row(s):
+    2025-01-13 | Bajaj CT125 | 21 units | ₱1,425,900
+
+RECONCILIATION
+  Total products: 50
+  Total categories: 17
+  Total units: 17,534
+  Total revenue: ₱4,441,540,000
+  Transactions: 990
+  Average order value: ₱4,486,404
+  Category revenue sum: ₱4,441,540,000
+  Monthly revenue sum: ₱4,441,540,000
+
+HERITAGE TRACE
+  Moto Guzzi V7 Stone: 475 units | ₱327,275,000
+  BMW R nineT: 227 units | ₱225,865,000
+
+STATUS: PASS - all quality checks passed, revenue reconciled.
+================================================================
