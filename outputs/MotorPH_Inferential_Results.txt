@@ -1,0 +1,203 @@
+MOTORPH TERMINAL ASSESSMENT - ANALYSIS RESULTS
+=======================================================
+
+DATA AND QA
+  Product rows: 50
+  Sales rows loaded: 991
+  Sales rows analyzed: 990
+  Date window: 2025-06-01 to 2025-08-31
+  Out-of-period rows excluded: 1
+    2025-01-13 | Bajaj CT125 | 21 units | ₱1,425,900
+  Units: 17,534
+  Revenue: ₱4,441,540,000
+  Transactions: 990
+  Missing values (products / sales): 0 / 0
+  Duplicate rows (products / sales): 0 / 0
+  Unparseable dates: 0
+  Unmatched product names: []
+  Price mismatch vs product list: 0
+  Quantity x Unit Price != Total: 0
+  Category revenue sum: ₱4,441,540,000
+  Monthly revenue sum: ₱4,441,540,000
+  Status: PASS
+
+PRODUCT SUMMARY (MS1)
+  Products: 50
+  Categories: 17
+  Mean price: ₱257,872
+  Median price: ₱204,950
+  Minimum price: ₱48,000
+  Maximum price: ₱995,000
+  Standard deviation: ₱183,425
+  Q1 price: ₱126,425
+  Q3 price: ₱330,250
+  Total inventory cost (one unit each): ₱12,893,600
+  Top 5 price share: 26.6%
+
+  Category counts:
+    Adventure: 4
+    Cafe racer: 2
+    Classic: 1
+    Commuter: 2
+    Cruiser: 4
+    Dual-sport: 3
+    Heritage: 2
+    Naked bike: 7
+    Retro: 1
+    Scooter: 12
+    Scrambler: 1
+    Sport: 4
+    Sport touring: 1
+    Standard: 1
+    Street: 1
+    Touring: 1
+    Underbone: 3
+
+  Acquisition years:
+    2021: 5
+    2022: 7
+    2023: 17
+    2024: 21
+
+  Top 5 prices:
+    BMW R nineT | Heritage | ₱995,000
+    Moto Guzzi V7 Stone | Heritage | ₱689,000
+    Honda Rebel 1100 | Cruiser | ₱650,000
+    KTM 790 Duke | Naked bike | ₱599,000
+    Harley-Davidson Street 750 | Cruiser | ₱499,000
+
+SALES SUMMARY (MS2)
+  Monthly:
+    2025-06 | revenue ₱1,505,589,800 | units 6,031 | transactions 339 | AOV ₱4,441,268 | ASP ₱249,642
+    2025-07 | revenue ₱1,490,582,700 | units 5,845 | transactions 331 | AOV ₱4,503,271 | ASP ₱255,018
+    2025-08 | revenue ₱1,445,367,500 | units 5,658 | transactions 320 | AOV ₱4,516,773 | ASP ₱255,456
+
+  Category:
+    Scooter | models 12 | units 4,036 | revenue ₱739,216,900 | ASP ₱183,156 | revenue share 16.6% | units share 23.0%
+    Cruiser | models 4 | units 1,427 | revenue ₱635,054,000 | ASP ₱445,027 | revenue share 14.3% | units share 8.1%
+    Naked bike | models 7 | units 2,147 | revenue ₱562,935,000 | ASP ₱262,196 | revenue share 12.7% | units share 12.2%
+    Heritage | models 2 | units 702 | revenue ₱553,140,000 | ASP ₱787,949 | revenue share 12.5% | units share 4.0%
+    Adventure | models 4 | units 1,556 | revenue ₱392,804,700 | ASP ₱252,445 | revenue share 8.8% | units share 8.9%
+    Sport | models 4 | units 1,425 | revenue ₱372,471,000 | ASP ₱261,383 | revenue share 8.4% | units share 8.1%
+    Dual-sport | models 3 | units 1,165 | revenue ₱306,517,800 | ASP ₱263,105 | revenue share 6.9% | units share 6.6%
+    Cafe racer | models 2 | units 578 | revenue ₱169,052,000 | ASP ₱292,478 | revenue share 3.8% | units share 3.3%
+    Touring | models 1 | units 427 | revenue ₱147,315,000 | ASP ₱345,000 | revenue share 3.3% | units share 2.4%
+    Classic | models 1 | units 458 | revenue ₱114,500,000 | ASP ₱250,000 | revenue share 2.6% | units share 2.6%
+    Underbone | models 3 | units 812 | revenue ₱90,240,800 | ASP ₱111,134 | revenue share 2.0% | units share 4.6%
+    Scrambler | models 1 | units 304 | revenue ₱89,680,000 | ASP ₱295,000 | revenue share 2.0% | units share 1.7%
+    Sport touring | models 1 | units 377 | revenue ₱75,362,300 | ASP ₱199,900 | revenue share 1.7% | units share 2.2%
+    Retro | models 1 | units 362 | revenue ₱65,884,000 | ASP ₱182,000 | revenue share 1.5% | units share 2.1%
+    Commuter | models 2 | units 881 | revenue ₱51,999,200 | ASP ₱59,023 | revenue share 1.2% | units share 5.0%
+    Street | models 1 | units 482 | revenue ₱48,151,800 | ASP ₱99,900 | revenue share 1.1% | units share 2.7%
+    Standard | models 1 | units 395 | revenue ₱27,215,500 | ASP ₱68,900 | revenue share 0.6% | units share 2.3%
+
+  Client type:
+    Retail | revenue ₱2,386,519,400 | units 9,307 | transactions 517 | revenue share 53.7%
+    Wholesale | revenue ₱2,019,794,000 | units 8,105 | transactions 463 | revenue share 45.5%
+    Unknown | revenue ₱35,226,600 | units 122 | transactions 10 | revenue share 0.8%
+
+  Monthly by client:
+    2025-06 | Retail ₱899,354,800 | Unknown ₱6,163,000 | Wholesale ₱600,072,000
+    2025-07 | Retail ₱698,994,300 | Unknown ₱2,184,000 | Wholesale ₱789,404,400
+    2025-08 | Retail ₱788,170,300 | Unknown ₱26,879,600 | Wholesale ₱630,317,600
+
+  Top 10 products by revenue:
+    Moto Guzzi V7 Stone | 475 units | ₱327,275,000
+    Bristol Bobber 650 | 575 units | ₱228,850,000
+    BMW R nineT | 227 units | ₱225,865,000
+    KTM 790 Duke | 363 units | ₱217,437,000
+    Honda Rebel 1100 | 256 units | ₱166,400,000
+    Yamaha Serow 250 | 496 units | ₱148,304,000
+    CFMoto 650MT | 427 units | ₱147,315,000
+    Honda CBR500R | 369 units | ₱143,541,000
+    Vespa GTS Super 300 | 343 units | ₱136,514,000
+    BMW G 310 GS | 426 units | ₱136,320,000
+
+  Top 10 products by units:
+    Bristol Bobber 650 | 575 units | ₱228,850,000
+    CFMoto 300SR | 496 units | ₱81,840,000
+    Yamaha Serow 250 | 496 units | ₱148,304,000
+    Bajaj CT125 | 488 units | ₱33,135,200
+    Yamaha FZi 150 | 482 units | ₱48,151,800
+    Zontes 310X | 480 units | ₱119,040,000
+    Moto Guzzi V7 Stone | 475 units | ₱327,275,000
+    Royal Enfield Classic 350 | 458 units | ₱114,500,000
+    Honda ADV 160 | 457 units | ₱75,359,300
+    CFMoto 300NK | 428 units | ₱70,620,000
+
+  Heritage trace:
+    Moto Guzzi V7 Stone | 475 units | ₱327,275,000
+    BMW R nineT | 227 units | ₱225,865,000
+
+INFERENTIAL ANALYSIS
+  Alpha: 0.05
+
+  Q1. Is the distribution of July 2025 product sales normal?
+    H0: The July 2025 product revenue distribution is normal.
+    H1: The July 2025 product revenue distribution is not normal.
+    Unit: July revenue for each of the 50 products. KTM Duke 200 had no July sales, so its value is 0.
+    n: 50
+    Mean: ₱29,811,654
+    Median: ₱19,875,000
+    Standard deviation: ₱26,430,275
+    Minimum: ₱0
+    Maximum: ₱131,340,000
+    Skewness: 1.842
+    Kurtosis: 4.139
+    Shapiro-Wilk W: 0.8213
+    p-value: 2.81355e-06
+    Decision: Reject H0
+    Interpretation: The distribution is right-skewed. A few premium models earn
+    much more than the median product, so the July product sales are not normal.
+
+  Q2. Are July 2025 retail sales greater than June 2025 retail sales?
+    H0: July daily retail revenue is less than or equal to June daily retail revenue.
+    H1: July daily retail revenue is greater than June daily retail revenue.
+    Unit: Daily retail revenue. June has 30 days, July has 31 days.
+    June: n 30, mean ₱29,978,493, median ₱26,774,150, sd ₱17,765,643
+    July: n 31, mean ₱22,548,203, median ₱16,530,100, sd ₱13,544,586
+    Mann-Whitney U: 352.0
+    p-value: 0.949224
+    Rank-biserial: -0.243
+    Decision: Fail to reject H0
+    Interpretation: The July daily retail revenue is lower, not higher. The data do
+    not support the claim that July retail sales were greater than June.
+
+  Q3. Is the distribution of August 2025 product sales normal?
+    H0: The August 2025 product revenue distribution is normal.
+    H1: The August 2025 product revenue distribution is not normal.
+    Unit: August revenue for each of the 50 products.
+    n: 50
+    Mean: ₱28,907,350
+    Median: ₱25,935,500
+    Standard deviation: ₱23,385,642
+    Minimum: ₱1,239,300
+    Maximum: ₱121,953,000
+    Skewness: 1.796
+    Kurtosis: 4.581
+    Shapiro-Wilk W: 0.8506
+    p-value: 1.60592e-05
+    Decision: Reject H0
+    Interpretation: The August distribution is also right-skewed. A few premium
+    models pull the mean above the median, so the distribution is not normal.
+
+  Q4. Were more products sold in August 2025 than in the previous months?
+    H0: August daily units are less than or equal to the June-July daily units.
+    H1: August daily units are greater than the June-July daily units.
+    Unit: Daily units sold. August has 31 days, June-July has 61 days.
+    Previous (June-July): n 61, mean 194.7, median 195.0, sd 70.4
+    August: n 31, mean 182.5, median 159.0, sd 83.1
+    Mann-Whitney U: 801.0
+    p-value: 0.884505
+    Rank-biserial: -0.153
+    Decision: Fail to reject H0
+    Interpretation: August daily units are lower, not higher. The data do not
+    support the claim that more products were sold in August.
+
+SUMMARY
+  Question | Test | Statistic | p-value | Decision
+  Q1 July normality | Shapiro-Wilk | W = 0.8213 | 2.81355e-06 | Reject H0
+  Q2 July retail > June | Mann-Whitney U | U = 352.0 | 0.949224 | Fail to reject H0
+  Q3 August normality | Shapiro-Wilk | W = 0.8506 | 1.60592e-05 | Reject H0
+  Q4 August units > previous | Mann-Whitney U | U = 801.0 | 0.884505 | Fail to reject H0
+
